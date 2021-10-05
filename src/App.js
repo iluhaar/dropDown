@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import './App.scss'
+import DropDown from './DropDown';
+
+const items = [
+  {
+    id: 1,
+    value: "first value",
+  },
+  {
+    id: 2,
+    value: "second value",
+  },
+  {
+    id: 3,
+    value: "third value",
+  },
+  {
+    id: 4,
+    value: "fourth value",
+  },
+]
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DropDown title="Sample title" items={items} multiselect/>
     </div>
   );
 }
